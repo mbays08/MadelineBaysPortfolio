@@ -1,0 +1,174 @@
+
+  body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 24px;
+    line-height: 1.5;
+    color: whitesmoke;
+    background-color: grey;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 10px;
+    color: turquoise;
+    font-weight: 500;
+    line-height: 1.1;
+  }
+  
+  h1 {
+    font-size: 32px;
+  }
+  
+  h2 {
+    font-size: 64px;
+    text-align: center;
+    text-decoration: underline;
+    
+  }
+  
+  p {
+    margin-top: 5px;
+    color: whitesmoke;
+    font-size: 20px;
+  }
+  
+
+  header {
+    width: 100%;
+    margin: 0 auto;
+    padding: 2.5rem;
+    text-align: center;
+    top: 0;
+    background-color: grey;
+    border: 5px solid white;}
+
+    header:hover{
+    box-shadow: inset 0px 0px 8px turquoise, 0 0 15px turquoise
+  }
+  
+  header h1.titlepage {
+    padding: 1rem 1.2rem;
+    font-size: 4.5rem;
+  }
+  
+  main {
+    width: 100%;
+    margin: 20px auto;
+  }
+  
+  footer {
+    margin: 1.5rem;
+    text-align: center;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  
+  .justify-center {
+    justify-content: center;
+  }
+  
+  /* using a mobile-first approach, set base column width to be 100% and we'll update it using media queries for larger screen sizes */
+  .box {
+    flex: 1 0 100%;
+    padding: 50px;
+    /* when the screen resizes, make it so our columns don't jump in size */
+    transition: flex-basis 500ms linear;
+    margin-bottom: 10px;
+  }
+  
+  /* make each code card a flexbox column to align and justify content within it */
+  .myphoto {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /*insert my photo*/
+    min-height: 100%;
+    padding: 2rem;
+    color: turquoise;
+  
+    /* outline is like border, but on the outside of the box instead of inside */
+    outline: 5px solid white;
+    outline-offset: -2px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .myphoto .card-header {
+    /* use position and negative margins to move title of card over the card's outline and create an overlap effect */
+    position: relative;
+    margin: -4rem 0 1.5rem 0;
+    padding: 0.5rem 1rem;
+    background-color: grey;
+    color: turquoise;
+    border: 2px solid white;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  /* set an outer and inner drop shadow on the card to create a glowing effect on hover */
+  .myphoto:hover,
+  .myphoto:hover .pictureheader {
+    box-shadow: inset 0px 0px 8px turquoise, 0 0 15px turquoise;
+  }
+  
+  /* each card's code block grows to the height of the largest code block on the page, making each card even in height */
+  .myphoto {
+    flex-grow: 1;
+  }
+  
+  .myphoto pre {
+    /* set styles to make it so code wraps in <pre> instead of overflowing */
+    white-space: pre-wrap;
+    overflow: auto;
+    tab-size: 4;
+    padding: 1.2rem 1rem;
+    color: white;
+    border-radius: 8px;
+    /* use linear-gradient() function to create a fading background  */
+    background-image: linear-gradient(
+      turquoise 0%,
+      --bright-turquoise 100%);
+    display: flex;
+    align-items: center;
+  }
+  
+  /* on <pre> click, select all contents so the code is highlighted */
+  .myphoto pre:active {
+    user-select: all;
+  }
+  
+  /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
+  @media screen and (min-width: 768px) {
+    /* on tablets, set columns to only be 50% of the width and not grow */
+    .box {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  
+    /* select the last child to grow to full width if it has space to grow */
+    .box:last-child {
+      flex-grow: 1;
+    }
+  }
+  
+  /* media query for larger screens */
+  @media screen and (min-width: 992px) {
+    header {
+      width: 75%;
+    }
+  
+    .box {
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+    }
+  }
+  
