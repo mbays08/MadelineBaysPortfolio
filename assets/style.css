@@ -40,7 +40,7 @@
   header {
     width: 100%;
     margin: 0 auto;
-    padding: 2.5rem;
+    padding: 20px;
     text-align: center;
     top: 0;
     background-color: grey;
@@ -51,8 +51,9 @@
   }
   
   header h1.titlepage {
-    padding: 1rem 1.2rem;
-    font-size: 4.5rem;
+    padding: 10px 20px;
+    font-size: 64px;
+    text-decoration: underline;
   }
   
   main {
@@ -60,10 +61,7 @@
     margin: 20px auto;
   }
   
-  footer {
-    margin: 1.5rem;
-    text-align: center;
-  }
+
   
   .row {
     display: flex;
@@ -81,7 +79,6 @@
   .box {
     flex: 1 0 100%;
     padding: 50px;
-    /* when the screen resizes, make it so our columns don't jump in size */
     transition: flex-basis 500ms linear;
     margin-bottom: 10px;
   }
@@ -95,24 +92,15 @@
     min-height: 100%;
     padding: 2rem;
     color: turquoise;
+
+  
   
     /* outline is like border, but on the outside of the box instead of inside */
     outline: 5px solid white;
     outline-offset: -2px;
     transition: all 0.5s ease-in-out;
   }
-  
-  .myphoto .card-header {
-    /* use position and negative margins to move title of card over the card's outline and create an overlap effect */
-    position: relative;
-    margin: -4rem 0 1.5rem 0;
-    padding: 0.5rem 1rem;
-    background-color: grey;
-    color: turquoise;
-    border: 2px solid white;
-    border-radius: 8px;
-    transition: all 0.5s ease-in-out;
-  }
+
   
   /* set an outer and inner drop shadow on the card to create a glowing effect on hover */
   .myphoto:hover,
@@ -125,26 +113,8 @@
     flex-grow: 1;
   }
   
-  .myphoto pre {
-    /* set styles to make it so code wraps in <pre> instead of overflowing */
-    white-space: pre-wrap;
-    overflow: auto;
-    tab-size: 4;
-    padding: 1.2rem 1rem;
-    color: white;
-    border-radius: 8px;
-    /* use linear-gradient() function to create a fading background  */
-    background-image: linear-gradient(
-      turquoise 0%,
-      --bright-turquoise 100%);
-    display: flex;
-    align-items: center;
-  }
-  
-  /* on <pre> click, select all contents so the code is highlighted */
-  .myphoto pre:active {
-    user-select: all;
-  }
+
+
   
   /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
   @media screen and (min-width: 768px) {
