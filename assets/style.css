@@ -24,7 +24,7 @@
   }
   
   h2 {
-    font-size: 64px;
+    font-size: 48px;
     text-align: center;
     text-decoration: underline;
     
@@ -105,10 +105,14 @@
   .myphoto {
     flex-grow: 1;
   }
+
+  ul li a {
+    text-decoration: none;
+    color: white;
+  }
   
-  /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
+
   @media screen and (min-width: 768px) {
-    /* on tablets, set columns to only be 50% of the width and not grow */
     .box {
       flex: 0 0 50%;
       max-width: 50%;
@@ -119,7 +123,6 @@
     }
   }
   
-  /* media query for larger screens */
   @media screen and (min-width: 992px) {
     header {
       width: 75%;
@@ -147,7 +150,6 @@
   .headshot {
     flex-shrink: 5;
   }
-
 
     .myphoto1 {
     display: flex;

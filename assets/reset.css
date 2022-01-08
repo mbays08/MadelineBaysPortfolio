@@ -35,8 +35,11 @@
     font-family: inherit;
   }
   
-  ol,
-  ul {
+  ul,
+  li
+  a {
     list-style: none;
+    text-decoration: none;
+    box-shadow: none;
   }
   
