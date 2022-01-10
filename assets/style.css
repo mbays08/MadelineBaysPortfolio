@@ -84,7 +84,7 @@
   }
   
 
-  .myphoto {
+  .aboutme {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -98,11 +98,11 @@
     transition: all 0.5s ease-in-out;
   }
 
-  .myphoto:hover,
-  .myphoto:hover {
+  .aboutme:hover,
+  .aboutme:hover {
     box-shadow: inset 0px 0px 8px turquoise, 0 0 15px turquoise;
   }
-  .myphoto {
+  .aboutme {
     flex-grow: 1;
   }
 
@@ -151,7 +151,7 @@
     flex-shrink: 5;
   }
 
-    .myphoto1 {
+    .workbox {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -160,15 +160,19 @@
     outline: 5px solid white;
     margin: 10px;
   }
-  .myphoto1:hover,
-  .myphoto1:hover {
+  .workbox:hover,
+  .workbox:hover {
     box-shadow: inset 0px 0px 8px turquoise, 0 0 15px turquoise;
   }
-  .myphoto1 {
+  .workbox {
     flex-grow: 1;
   }
 
   .responsive{
     width:100%;
     height: auto;
+  }
+
+  .responsive:hover{   
+    box-shadow: inset 0px 0px 8px turquoise, 0 0 15px turquoise;
   }
